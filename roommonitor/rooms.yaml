@@ -1,0 +1,41 @@
+campus:
+  name: Main campus
+  timezone: Asia/Kolkata
+
+# One entry per node. The id here must match ROOM_ID in firmware/config.h.
+rooms:
+  - { id: A001, name: "Lecture Hall A001", block: "A", floor: 0, capacity: 120, kind: lecture }
+  - { id: A002, name: "Lecture Hall A002", block: "A", floor: 0, capacity: 120, kind: lecture }
+  - { id: A003, name: "Tutorial Room A003", block: "A", floor: 0, capacity: 40,  kind: classroom }
+  - { id: A101, name: "Classroom A101", block: "A", floor: 1, capacity: 70, kind: classroom }
+  - { id: A102, name: "Classroom A102", block: "A", floor: 1, capacity: 70, kind: classroom }
+  - { id: A103, name: "Classroom A103", block: "A", floor: 1, capacity: 70, kind: classroom }
+  - { id: A104, name: "Drawing Hall A104", block: "A", floor: 1, capacity: 90, kind: lecture }
+  - { id: A201, name: "Classroom A201", block: "A", floor: 2, capacity: 70, kind: classroom }
+  - { id: A202, name: "Classroom A202", block: "A", floor: 2, capacity: 70, kind: classroom }
+  - { id: A203, name: "Seminar Room A203", block: "A", floor: 2, capacity: 45, kind: seminar }
+  - { id: A301, name: "Programming Lab A301", block: "A", floor: 3, capacity: 60, kind: lab }
+  - { id: A302, name: "Project Lab A302", block: "A", floor: 3, capacity: 30, kind: lab }
+  - { id: B101, name: "Classroom B101", block: "B", floor: 1, capacity: 70, kind: classroom }
+  - { id: B102, name: "Classroom B102", block: "B", floor: 1, capacity: 70, kind: classroom }
+  - { id: B201, name: "Reading Hall B201", block: "B", floor: 2, capacity: 150, kind: study }
+  - { id: B202, name: "Group Study B202", block: "B", floor: 2, capacity: 24, kind: study }
+
+# days: 0 = Monday ... 6 = Sunday. Times are 24h, campus local.
+# Copy this straight off the department timetable once and update per semester.
+timetable:
+  - { room: A001, days: [0,2,4], start: "09:00", end: "10:00", label: "Engineering Mathematics IV" }
+  - { room: A001, days: [1,3],   start: "11:00", end: "12:00", label: "Technical Writing" }
+  - { room: A002, days: [0,1,2,3,4], start: "10:00", end: "11:00", label: "Operating Systems" }
+  - { room: A003, days: [1,3],   start: "14:00", end: "15:00", label: "Tutorial — DBMS" }
+  - { room: A101, days: [0,2,4], start: "09:00", end: "11:00", label: "Data Structures" }
+  - { room: A102, days: [0,1,2,3,4], start: "11:00", end: "12:00", label: "Computer Networks" }
+  - { room: A103, days: [1,3],   start: "09:00", end: "10:00", label: "Theory of Computation" }
+  - { room: A104, days: [2],     start: "14:00", end: "17:00", label: "Engineering Drawing" }
+  - { room: A201, days: [0,2,4], start: "12:00", end: "13:00", label: "Compiler Design" }
+  - { room: A202, days: [1,3],   start: "10:00", end: "11:00", label: "Machine Learning" }
+  - { room: A203, days: [4],     start: "15:00", end: "17:00", label: "Project reviews" }
+  - { room: A301, days: [0,1,2,3,4], start: "14:00", end: "17:00", label: "Lab batch A/B" }
+  - { room: A302, days: [5],     start: "10:00", end: "13:00", label: "Project lab (open)" }
+  - { room: B101, days: [0,2],   start: "15:00", end: "16:00", label: "Elective — IoT" }
+  - { room: B102, days: [1,3],   start: "12:00", end: "13:00", label: "Elective — Cloud" }
